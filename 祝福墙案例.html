@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- 
+
+        ondblclick
+            双击
+     -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+        
+        body {
+            background: url("images/bg.gif");
+            font: 12px "simsun";
+        }
+        
+        .content {
+            width: 960px;
+            height: 627px;
+            margin: 0 auto;
+            background: url("images/content_bg.jpg");
+            position: relative;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        
+        .clearfix:before,
+        .clearfix:after {
+            content: '';
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        .tip {
+            width: 227px;
+            position: absolute;
+            top: 100px;
+            left: 200px;
+        }
+        
+        .tip-h {
+            padding-top: 50px;
+            background: url("images/tip1_h.gif") no-repeat;
+            cursor: default;
+        }
+        
+        .text {
+            float: left;
+            padding-left: 10px;
+        }
+        
+        .close {
+            float: right;
+            margin-right: 10px;
+        }
+        
+        .tip-m {
+            min-height: 40px;
+            padding: 0 10px;
+            padding-top: 10px;
+            background: url("images/tip1_c.gif");
+        }
+        
+        .tip-f {
+            height: 53px;
+            background: url("images/tip1_f.gif");
+            padding-top: 20px;
+        }
+        
+        .icon {
+            float: left;
+            padding-left: 10px;
+        }
+        
+        .name {
+            float: right;
+            padding-right: 10px;
+        }
+        
+        .submit_con {
+            position: absolute;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+        
+        .submit_con>.con_s {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #e8deff;
+        }
+        
+        #text_con {
+            resize: none;
+            border: none;
+            width: 100%;
+            height: 200px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: none;
+            background-color: #ded4f3c2;
+        }
+        
+        #name_con {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: 0;
+            float: right;
+            border-radius: 5px;
+            padding-left: 10px;
+            margin: 30px 10px;
+        }
+        
+        #submit {
+            width: 40px;
+            -webkit-appearance: button;
+            height: 30px;
+            background-color: #fff;
+            border: 0;
+            border-radius: 5px;
+            margin: 30px 20px;
+            float: right;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .addMessage {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            font-size: 12px;
+            line-height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            z-index: 999;
+            background-color: #9466FF;
+            box-sizing: border-box;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        #errSpan {
+            color: red;
+            position: absolute;
+            bottom: 8px;
+        }
+        
+        #closeDT {
+            text-decoration: none;
+            float: left;
+            color: #000;
+            margin: 72px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="content" id="content">
+        <a class="addMessage" id="addMessage">添加留言</a>
+        <div class="submit_con" id="submit_con">
+            <div class="con_s">
+                <textarea name="" cols="30" rows="10" id="text_con" placeholder="留言"></textarea>
+                <input type="text" placeholder="姓名" id="name_con">
+                <input type="button" value="提交" id="submit">
+                <a href="#" id="closeDT">关闭</a>
+                <span id="errSpan"></span>
+            </div>
+        </div>
+
+        <!-- <div class="tip" id="tip">
+            <div class="tip-h clearfix" title="双击关闭纸条">
+                <div class="text">第[49568]条 2019-04-16 22:51:52</div>
+                <div class="close" title="关闭纸条">x</div>
+            </div>
+            <div class="tip-m">这是一个寂寞的天，下着有些猥琐的雨</div>
+            <div class="tip-f clearfix">
+                <div class="icon">
+                    <img src="images/bpic_1.gif" alt="" />
+                </div>
+                <div class="name">群姐</div>
+            </div>
+        </div> -->
+
+    </div>
+
+
+</body>
+
+</html>
+
+<!-- 
+    双击事件：
+        ondblclick
+-->
+
+<script src="幸福墙案例.js"></script>
