@@ -82,7 +82,7 @@ function removeLocalStorage(key) {
 // 找到 content 元素
 var content = document.getElementById('content');
 
-// 数据存储 单条
+// 层级
 let zIndex = 1;
 
 // 为祝福墙贴纸做对应的事件与绑定
